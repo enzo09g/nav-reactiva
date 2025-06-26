@@ -18,7 +18,10 @@ ScrollTrigger.create({
 
 Observer.create({
   target: window,
-  type: "wheel,touch",
+  type: "wheel,touch,scroll",
+  onChange: (self) => {
+    console.log(self.deltaY)
+  },
   onUp: () => anim.play(),
   onDown: () => anim.reverse(),
 });
