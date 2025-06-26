@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Acumin';
+    src: url('public/fonts/fonnts.com-Acumin_Pro_ExtraCondensed.otf');
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+  transition: background 0.5s;
+}
+
+.nav--scrolled::before {
+  background-color: #000;
+}
+
+nav div {
+    padding: 0 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+nav div.img {
+    padding: 15px;
+    max-width: 250px;
+}
+
+nav div.ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul.first {
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    text-wrap: nowrap;
+    font-family: "Fira Sans";
+
+}
+
+li {
+    color: white;
+    cursor: pointer;
+    max-height: 100%;
+}
+
+ul.first li {
+    padding: 15px 6px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    color: #9d9d9d;
+    font-weight: 500;
+}
+
+ul li.li-phone {
+    color: white;
+
+    img {
+        filter: invert(1);
+        max-height: 32px;
+        width: auto;
+    }
+}
+
+ul li.li-button {
+    color: black;
+    display: flex;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 4px;
+    height: 40px;
+}
+
+ul.first span {
+    padding-right: 50px;
+    padding-left: 10px;
+    position: relative;
+}
+
+ul.first span::after {
+    content: "";
+    position: absolute;
+    background-image: url('public/img/icons8-galón-izquierdo-24.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18px;
+    transform: scale(-1);
+    height: 18px;
+    right: 0;
+
+}
+
+ul.second {
+    font-family: 'Acumin';
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+ul.second li {
+    padding: 10px;
+}
+
+ul.second li.li-search {
+    margin-left: 30px;
+    background-image: url("https://hamiltonsupply.com/wp-content/themes/yhmoulding-2019-child/img/search-white.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 27px;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+
+section.section {
+    background-image: url('https://hamiltonsupply.com/wp-content/themes/yhmoulding-2019-child/video/hamilton-home-video-3.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.section2 {
+    height: 200vh;
+}
